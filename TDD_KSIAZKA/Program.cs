@@ -12,4 +12,12 @@ namespace TDD_KSIAZKA
         {
         }
     }
+
+    public class BasicTestCheck
+    {
+        int returnTheSameNumber( int number)
+        {
+            return number;
+        }
+    }
 }
