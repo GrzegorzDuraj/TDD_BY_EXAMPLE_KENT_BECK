@@ -1,10 +1,7 @@
 ﻿namespace TDD_KSIAZKA
 {
-    public class Dollar
+    public class Dollar : Money
     {
-        private int amount;
-
-
         public Dollar(int v)
         {
             this.amount = v;
@@ -17,8 +14,8 @@
 
         public override bool Equals (object ob)
         {
-            Dollar dollar = (Dollar)ob;
-            return amount == dollar.amount;
+            Money money= (Money)ob;
+            return amount == money.amount;
         }
     }
 }
