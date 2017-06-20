@@ -20,20 +20,6 @@ namespace TDD_KSIAZKA_TEST
             int tryInt = 8;
             Assert.AreEqual(tryInt, checker.returnTheSameNumber(tryInt));
         }
-    }
-
-    [TestClass]
-    public class MoneyTest
-    {
-        [TestMethod]
-        public void testMultiplication()
-        {
-            Dollar five = new Dollar(5);
-            Dollar product = five.times(2);
-            Assert.AreEqual(10, product.amount);
-            product = five.times(3);
-            Assert.AreEqual(15, product.amount);
-        }
 
     }
 }

@@ -10,9 +10,15 @@
             this.amount = v;
         }
 
-        public Dollar times(int multiplier)
+        public Dollar Times(int multiplier)
         {
             return new Dollar(amount * multiplier);
+        }
+
+        public override bool Equals (object ob)
+        {
+            Dollar dollar = (Dollar)ob;
+            return amount == dollar.amount;
         }
     }
 }
