@@ -11,11 +11,6 @@
         {
             return new Franc(amount * multiplier);
         }
-
-        public override bool Equals (object ob)
-        {
-            Franc dollar = (Franc)ob;
-            return amount == dollar.amount;
-        }
+ 
     }
 }

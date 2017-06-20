@@ -12,10 +12,5 @@
             return new Dollar(amount * multiplier);
         }
 
-        public override bool Equals (object ob)
-        {
-            Money money= (Money)ob;
-            return amount == money.amount;
-        }
     }
 }

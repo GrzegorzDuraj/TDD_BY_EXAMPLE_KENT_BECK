@@ -2,6 +2,12 @@
 {
     public class Money
     {
-        protected int amount;
+        public int amount;
+        
+        public override bool Equals(object ob)
+        {
+            Money money = (Money)ob;
+            return this.amount == money.amount && this.GetType() == ob.GetType();
+        }
     }
 }
