@@ -11,8 +11,8 @@ namespace TDD_KSIAZKA_TEST
         public void testMultiplication()
         {
             Money five = Money.Dollar(5);
-            Assert.AreEqual(Money.Dollar( 10)  , five.Times(2) );
-            Assert.AreEqual( Money.Dollar(15) , five.Times (3) );
+            Assert.AreEqual(Money.Dollar(10), five.Times(2));
+            Assert.AreEqual(Money.Dollar(15), five.Times(3));
         }
 
         [TestMethod]
@@ -29,8 +29,15 @@ namespace TDD_KSIAZKA_TEST
         public void testFrancMultiplication()
         {
             Money five = Money.Franc(5);
-            Assert.AreEqual(Money.Franc (10) , five.Times(2) );
-            Assert.AreEqual( Money.Franc (15) , five.Times (3) );
+            Assert.AreEqual(Money.Franc(10), five.Times(2));
+            Assert.AreEqual(Money.Franc(15), five.Times(3));
+        }
+
+        [TestMethod]
+        public void testCurrency()
+        {
+            Assert.AreEqual("USD", Money.Dollar(1).Currency());
+            Assert.AreEqual("CHF", Money.Franc(1).Currency()); 
         }
     }
 }

@@ -2,14 +2,13 @@
 {
     public class Dollar : Money
     {
-        public Dollar(int v)
+        public Dollar(int amount, string currency): base (amount , currency)
         {
-            this.amount = v;
         }
 
         public override Money Times(int multiplier)
         {
-            return new Dollar(amount * multiplier);
+            return Money.Dollar(amount * multiplier);
         }
 
     }
