@@ -3,6 +3,13 @@
 TODO LIST 
 TDD By Example Kent Beck
 
+
+
+
+
+
+
+
 $5 + 10 CHF = $10 if rate is 2:1
                                                                         $5 * 2 = $10
                                                                         Make "amount" private
@@ -15,7 +22,7 @@ Equal object
                                                                         5 CHF * 2 = 10 CHF
 Dollar/Franc duplication
                                                                         Comman equals
-Common times 
+                                                                        Common times 
                                                                         Compare Francs to Dollars 
                                                                         Currency ? 
 Delete testFrancMultiplication

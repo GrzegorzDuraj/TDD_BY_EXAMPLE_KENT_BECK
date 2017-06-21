@@ -2,7 +2,7 @@
 
 namespace TDD_KSIAZKA
 {
-    abstract public class Money
+     public class Money
     {
         protected int amount;
         protected string currency;
@@ -13,10 +13,10 @@ namespace TDD_KSIAZKA
             this.currency = currency;
         }
 
-        public override bool Equals(object ob)
+        public override bool Equals(Object ob)
         {
             Money money = (Money)ob;
-            return this.amount == money.amount && this.GetType() == ob.GetType();
+            return this.amount == money.amount && Currency().Equals(money.Currency());
         }
 
         public static Money Dollar(int amount)
@@ -24,7 +24,10 @@ namespace TDD_KSIAZKA
             return new Dollar(amount, "USD"); 
         }
 
-        public abstract Money Times(int multiplier);
+        public  Money Times(int multiplier)
+        {
+            return new Money (this.amount * multiplier, this.currency);
+        }
 
         public static Money Franc(int amount)
         {
@@ -34,6 +37,14 @@ namespace TDD_KSIAZKA
         public object Currency()
         {
             return currency;
+        }
+
+        public new String ToString
+        {
+            get
+            {
+                return amount + " " + currency;
+            }
         }
     }
 }
