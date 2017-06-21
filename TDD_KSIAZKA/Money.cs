@@ -1,6 +1,8 @@
-﻿namespace TDD_KSIAZKA
+﻿using System;
+
+namespace TDD_KSIAZKA
 {
-    public class Money
+    abstract public class Money
     {
         public int amount;
         
@@ -8,6 +10,18 @@
         {
             Money money = (Money)ob;
             return this.amount == money.amount && this.GetType() == ob.GetType();
+        }
+
+        public static Money Dollar(int v)
+        {
+            return new Dollar(v);
+        }
+
+        public abstract Money Times(int multiplier);
+
+        public static Money Franc(int v)
+        {
+            return new Franc(v);
         }
     }
 }
