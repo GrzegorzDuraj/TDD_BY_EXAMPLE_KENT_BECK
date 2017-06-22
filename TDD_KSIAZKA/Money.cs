@@ -21,7 +21,7 @@ namespace TDD_KSIAZKA
 
         public static Money Dollar(int amount)
         {
-            return new Dollar(amount, "USD"); 
+            return new Money(amount, "USD"); 
         }
 
         public  Money Times(int multiplier)
@@ -31,7 +31,7 @@ namespace TDD_KSIAZKA
 
         public static Money Franc(int amount)
         {
-            return new Franc(amount, "CHF");
+            return new Money(amount, "CHF");
         }
 
         public object Currency()
